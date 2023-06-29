@@ -58,6 +58,19 @@ button {
     align-items: center;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* Header styles */
 
 .header {
@@ -89,6 +102,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-black-color);
+
+    padding: 24px 0;
 }
 
 .nav-link:hover,
@@ -152,7 +167,7 @@ button {
 }
 
 .hero-title {
-    width: 496px;
+    max-width: 496px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -165,6 +180,10 @@ button {
 }
 
 .hero-button {
+    display: block;
+    margin: 0 auto;
+    min-width: 169px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -175,7 +194,6 @@ button {
     background-color: var(--primary-accent-color);
 
     padding: 16px 32px;
-    margin-left: 480px;
 }
 
 .hero-button:hover,
@@ -206,6 +224,7 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--secondary-black-color);
+    margin-bottom: 8px;
 }
 
 /* Doing styles */
@@ -263,11 +282,11 @@ button {
     width: calc((100% - 3 * 24px) / 4);
     flex-direction: column;
     background-color: var(--primary-white-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-cards-bottom {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 16px;
 }
 
 .team-names {
@@ -292,13 +311,11 @@ button {
 }
 
 .filters-button-list {
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     gap: 24px;
 
     margin-bottom: 72px;
-    margin-left: 271px;
 }
 
 .filters-button {
@@ -318,6 +335,7 @@ button {
 .filters-button:focus {
     color: var(--primary-white-color);
     background-color: var(--secondary-accent-color);
+    border: 1px solid transparent;
 }
 
 .examples-list {
@@ -362,12 +380,9 @@ button {
     background-color: var(--secondary-black-color);
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo-color {
@@ -375,7 +390,7 @@ button {
 }
 
 .footer-text {
-    width: 264px;
+    max-width: 264px;
     color: var(--secondary-white-color);
     font-size: 16px;
     line-height: 1.5;
